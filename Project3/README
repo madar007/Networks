@@ -1,0 +1,18 @@
+Name: Sarin Madarasmi
+Id: 4626422
+
+You can run my program by 
+python dir-server.py <dsport>
+python app-server.py <dsport>
+python app-client.py <dsport> <dbport> 
+
+Note: during my screenshot, I was not able to ssh to any lind hall computers so instead I ssh into kh1200 for the app-client
+
+The files names that are used for each size are hard-coded into my program so you would need to have file names: 
+1. 10KB
+2. 100KB
+3. 1000KB
+4. 10000KB
+These are also hard coded that these files are in the current directory of the app-client.py
+
+The screenshots are all in one .png file for all the app-server, app-client, and dir-server messages. 

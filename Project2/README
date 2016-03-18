@@ -1,0 +1,25 @@
+Name: Sarin Madarasmi
+ID: 4626422
+x500: madar007
+
+How to run the program:
+1. In server folder: python server_[ tcp | udp ].py <port no>
+	Example: python server_tcp.py 9000
+2. In client folder: python client_[ tcp | udp ].py <server ip addr> <port no> <filename>
+	Example: python client_tcp.py localhost 9000 input_small.txt
+
+How to indicate buffer sizes:
+In each server and client files, buffer_size is a global variable. They are all set to initially be 256 bytes. If you change the 
+buffer_size in server file, do the same in client file. 
+
+*NOTE* I removed all the lines/parts of my programs that was used to calculate the download time, total bytes, and number of 
+messages after I recorded them in question 6. 
+*NOTE* makefile does not exist because I used python
+*NOTE* message.h does not exist because I used python. Instead I made Message structure in each python file. 
+
+Brief description of how files are downloaded:
+The client requests for a download of a file and sends filename to be downloaded to the server. The server finds that file and 
+responds by sending the contents of the file until the whole file as been sent. If the server cannot find the file, it responds by
+sending a error message type. For each respond from the server, the client must acknowledge receiving the respond by sending a 
+ACK message to the server. Only then will the server continue to send the files. When the file is finished sending, the server
+will send finish message type to the client and both the sockets are closed. 
